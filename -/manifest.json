@@ -1,0 +1,32 @@
+{
+  "name": "BarBerSHOP誠屋",
+  "short_name": "誠屋",
+  "description": "鹿児島県霧島市のマンツーマン施術メンズ専門店 誠屋の店舗情報",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/profile_image.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "images/profile_image.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "images/profile_image.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["beauty", "barbershop"],
+  "lang": "ja"
+}

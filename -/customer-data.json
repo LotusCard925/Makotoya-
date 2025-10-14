@@ -1,0 +1,23 @@
+{
+  "shop_name": "誠屋",
+  "shop_bio": "<理容室>マンツーマン施術のメンズ専門店♪<br>高い技術で地元で愛されているバーバーです◎<br><br><span class=\"hours-label\">営業時間:</span> <span class=\"hours-times\">8:30～19:30</span><br><span class=\"hours-label\">定休日:</span> <span class=\"hours-times\">毎週火曜日・祝日</span><br><br>💈鹿児島県霧島市に2017年5月にオープン💈<br><br>予約はホットペッパーから、お願い致します。<br>電話予約は受け付けておりません。",
+  "shop_address": "〒899-4332 鹿児島県霧島市国分中央６丁目13-1",
+  "shop_address_url": "https://maps.app.goo.gl/jtdQ9CS9SKEGrNJx8",
+  "page_title": "BarBerSHOP誠屋【バーバーショップマコトヤ】",
+  "share_title": "BarBerSHOP誠屋【バーバーショップマコトヤ】",
+  "share_text": "💈鹿児島県霧島市のマンツーマン施術メンズ専門店 誠屋💈 高い技術で地元愛されるバーバー 8:30～19:30営業",
+  "footer_text": "誠屋",
+  "profile_image_url": "images/profile_image.jpg",
+  "background_image_url": "images/background_image.jpg",
+  "apple_app_title": "誠屋",
+  "apple_touch_icon": "images/profile_image.jpg",
+  "sns": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/barbershop_makotoya/",
+      "icon": "Instagram.png"
+    }
+  ],
+  "reservation_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000578633&ch=5&vos=cphpbprocap0130408001",
+  "reservation_text": "ネット予約はこちらから"
+}

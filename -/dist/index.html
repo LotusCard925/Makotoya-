@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0d12">
+    <title>BarBerSHOP誠屋【バーバーショップマコトヤ】</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .hero {
+        /* coverにして大小様々な背景でも破綻しにくくする */
+        background: url('../images/background_image.jpg') center/cover no-repeat, linear-gradient(180deg, rgba(11,13,18,.3), rgba(11,13,18,.5)) !important;
+      }
+    </style>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="誠屋">
+    <link rel="apple-touch-icon" href="images/profile_image.jpg">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="hero">
+        <div class="hero-inner">
+        </div>
+      </div>
+    </header>
+    <section class="identity-block" aria-label="プロフィール概要">
+      <img class="hero-avatar" src="../images/profile_image.jpg" alt="プロフィール写真">
+      <div class="identity-info">
+      <p class="identity-title">誠屋</p>
+      <p class="identity-address">
+        <a href="https://maps.app.goo.gl/jtdQ9CS9SKEGrNJx8" target="_blank" rel="noopener" class="address-link">
+          📍 〒899-4332 鹿児島県霧島市国分中央６丁目13-1
+        </a>
+      </p>
+        <p class="identity-subtitle"><理容室>マンツーマン施術のメンズ専門店♪<br>高い技術で地元で愛されているバーバーです◎<br><br><span class="hours-label">営業時間:</span> <span class="hours-times">8:00〜19:30（予約により時間は異なりまます）</span><br><span class="hours-label">定休日:</span> <span class="hours-times">完全不定休（ネット予約にて確認下さい）</span><br><br>💈鹿児島県霧島市に2017年5月にオープン💈<br>     💈Bar Ber SHOP 誠屋💈<br><br>予約はホットペッパーから、<br>電話予約は受け付けておりません。<br>ネット予約はこちらから↓↓↓</p>
+      </div>
+    </section>
+    <main class="card" role="main">
+
+      <section class="sns" aria-label="SNS リンク">
+        <div class="reservation-button-container">
+          <a class="reservation-btn" href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000578633&ch=5&vos=cphpbprocap0130408001" target="_blank" rel="noopener">
+            <span class="reservation-text">ネット予約はこちらから</span>
+          </a>
+        </div>
+        <div class="sns-grid" data-count="2">
+          <a class="sns-btn" href="https://www.instagram.com/barbershop_makotoya/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="../images/Instagram.png" alt="Instagram">
+            <span class="label">Instagram</span>
+          </a>
+          <a class="sns-btn" href="https://maps.app.goo.gl/jtdQ9CS9SKEGrNJx8" target="_blank" rel="noopener" aria-label="Google Maps">
+            <img src="../images/google-maps-new copy.png" alt="Google Maps">
+            <span class="label">Google Maps</span>
+          </a>
+        </div>
+        <div class="action-buttons">
+          <button class="action-btn share-btn" aria-label="共有">
+            <span class="action-text">共有</span>
+          </button>
+          <button class="action-btn install-btn" id="open-save-modal-button" aria-label="情報の保存">
+            <span class="action-text">情報の保存</span>
+          </button>
+        </div>
+      </section>
+
+
+
+    </main>
+
+    <!-- Save Options Modal -->
+    <div id="save-options-modal" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <p class="modal-title">保存方法を選択</p>
+        <div class="modal-actions">
+          <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:誠屋%0AORG:BarBerSHOP誠屋%0ATITLE:バーバーショップ%0AURL:https://maps.app.goo.gl/jtdQ9CS9SKEGrNJx8%0ANOTE:鹿児島県霧島市のマンツーマン施術メンズ専門店%0AEND:VCARD" download="誠屋.vcf" class="modal-button">連絡先に保存</a>
+          
+          <a href="mailto:?subject=【BarBerSHOP誠屋】誠屋様の連絡先&body=誠屋様の連絡先です。%0A%0A---%0A店舗名: BarBerSHOP誠屋%0A住所: 〒899-4332 鹿児島県霧島市国分中央６丁目13-1%0A営業時間: 8:30～19:30%0A定休日: 毎週火曜日・祝日%0AInstagram: https://www.instagram.com/barbershop_makotoya/%0A予約: https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000578633&ch=5&vos=cphpbprocap0130408001%0A---" class="modal-button">メールを自分に送信</a>
+          
+          <button id="add-to-home-screen-button" class="modal-button">ホーム画面に追加</button>
+        </div>
+        <button id="close-modal-button" class="modal-close-button">戻る</button>
+      </div>
+    </div>
+
+    <!-- Install Instructions Modal -->
+    <div id="install-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>ホーム画面に追加する手順</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="instructions">
+            <h4>【iPhone/iPadの場合】</h4>
+            <ol>
+              <li>Safariでウェブサイトを開く</li>
+              <li>画面下部（または上部）の「共有」アイコンをタップ</li>
+              <li>「ホーム画面に追加」を選択</li>
+              <li>「追加」をタップ</li>
+            </ol>
+            
+            <h4>【Androidの場合 (Chrome)】</h4>
+            <ol>
+              <li>Chromeでウェブサイトを開く</li>
+              <li>右上の「⋮」メニューをタップ</li>
+              <li>「ホーム画面に追加」を選択</li>
+              <li>画面の指示に従い「追加」をタップ</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> 誠屋</small>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear()
+      
+      // Register Service Worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    console.log('New content available!');
+                  }
+                });
+              });
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+      // Lightbox: open on hero background / avatar / gallery image click
+      ;(function(){
+        const modal = document.createElement('div')
+        modal.className = 'lightbox'
+        modal.innerHTML = `
+          <button class="lb-btn lb-close" aria-label="閉じる">✕</button>
+          <button class="lb-btn lb-prev" aria-label="前へ">‹</button>
+          <button class="lb-btn lb-next" aria-label="次へ">›</button>
+          <div class="lb-viewport">
+            <img class="lightbox-img" alt="preview">
+          </div>
+          <div class="lb-zoom">
+            <button class="lb-btn lb-zoom-in" aria-label="拡大">＋</button>
+            <button class="lb-btn lb-zoom-out" aria-label="縮小">－</button>
+            <button class="lb-btn lb-zoom-reset" aria-label="リセット">リセット</button>
+          </div>`
+        document.body.appendChild(modal)
+
+        const modalImg = modal.querySelector('.lightbox-img')
+        const btnClose = modal.querySelector('.lb-close')
+        const btnPrev = modal.querySelector('.lb-prev')
+        const btnNext = modal.querySelector('.lb-next')
+        const btnZoomIn = modal.querySelector('.lb-zoom-in')
+        const btnZoomOut = modal.querySelector('.lb-zoom-out')
+        const btnZoomReset = modal.querySelector('.lb-zoom-reset')
+
+        let galleryNodes = Array.from(document.querySelectorAll('.gallery-grid img'))
+        let gallerySrcs = galleryNodes.map(n => n.src)
+        let currentIndex = -1
+        let scale = 1
+        let tx = 0, ty = 0
+        let isDragging = false
+        let dragStartX = 0, dragStartY = 0
+
+        const applyTransform = () => {
+          modalImg.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`
+        }
+
+        const open = (src, index = -1) => {
+          modalImg.src = src
+          modal.classList.add('open')
+          document.body.style.overflow = 'hidden'
+          currentIndex = index
+          scale = 1; tx = 0; ty = 0
+          applyTransform()
+          // toggle nav buttons only for gallery
+          const showNav = index >= 0
+          btnPrev.style.display = showNav ? 'block' : 'none'
+          btnNext.style.display = showNav ? 'block' : 'none'
+        }
+        const close = () => {
+          modal.classList.remove('open')
+          document.body.style.overflow = ''
+          modalImg.src = ''
+          currentIndex = -1
+          scale = 1
+        }
+        const show = (delta) => {
+          if (currentIndex < 0) return
+          currentIndex = (currentIndex + delta + gallerySrcs.length) % gallerySrcs.length
+          modalImg.src = gallerySrcs[currentIndex]
+          scale = 1; tx = 0; ty = 0
+          applyTransform()
+        }
+
+        // Click targets: hero background, avatar and gallery images
+        const avatar = document.querySelector('.hero-avatar')
+        const hero = document.querySelector('.hero')
+        if (avatar) avatar.addEventListener('click', () => open(avatar.src))
+        // Extract background image url from computed style
+        if (hero) hero.addEventListener('click', () => {
+          const bg = getComputedStyle(hero).backgroundImage
+          // background-image can contain multiple layers; pick the first url(
+          const m = bg.match(/url\(["']?(.*?)["']?\)/)
+          if (m && m[1]) open(m[1])
+        })
+        galleryNodes.forEach((img, idx) => {
+          img.style.cursor = 'zoom-in'
+          img.addEventListener('click', () => open(img.src, idx))
+        })
+
+        // Close handlers
+        modal.addEventListener('click', (e) => { if (e.target === modal) close() })
+        btnClose.addEventListener('click', close)
+        window.addEventListener('keydown', (e) => { 
+          if (e.key === 'Escape') close()
+          if (e.key === 'ArrowLeft') show(-1)
+          if (e.key === 'ArrowRight') show(1)
+        })
+
+        // Nav buttons
+        btnPrev.addEventListener('click', (e) => { e.stopPropagation(); show(-1) })
+        btnNext.addEventListener('click', (e) => { e.stopPropagation(); show(1) })
+
+        // Zoom controls
+        btnZoomIn.addEventListener('click', (e)=>{ e.stopPropagation(); scale = Math.min(4, scale + 0.25); applyTransform() })
+        btnZoomOut.addEventListener('click', (e)=>{ e.stopPropagation(); scale = Math.max(1, scale - 0.25); if (scale===1) { tx=0; ty=0; } applyTransform() })
+        btnZoomReset.addEventListener('click', (e)=>{ e.stopPropagation(); scale = 1; tx = 0; ty = 0; applyTransform() })
+        modal.addEventListener('wheel', (e)=>{ e.preventDefault();
+          const prev = scale
+          scale = Math.max(1, Math.min(4, scale + (e.deltaY < 0 ? 0.1 : -0.1)))
+          // Optional: simple zoom toward cursor
+          const rect = modalImg.getBoundingClientRect()
+          const cx = e.clientX - rect.left - rect.width/2
+          const cy = e.clientY - rect.top - rect.height/2
+          if (prev !== 1 || scale !== 1) { tx -= cx * (scale/prev - 1); ty -= cy * (scale/prev - 1) }
+          if (scale===1) { tx=0; ty=0 }
+          applyTransform()
+        }, { passive: false })
+
+        // Drag/pan when zoomed
+        const viewport = modal.querySelector('.lb-viewport')
+        const startDrag = (x, y) => { if (scale <= 1) return; isDragging = true; dragStartX = x - tx; dragStartY = y - ty; modal.classList.add('dragging') }
+        const moveDrag = (x, y) => { if (!isDragging) return; tx = x - dragStartX; ty = y - dragStartY; applyTransform() }
+        const endDrag = () => { isDragging = false; modal.classList.remove('dragging') }
+        viewport.addEventListener('mousedown', (e)=>{ e.preventDefault(); startDrag(e.clientX, e.clientY) })
+        window.addEventListener('mousemove', (e)=> moveDrag(e.clientX, e.clientY))
+        window.addEventListener('mouseup', endDrag)
+
+        // Touch swipe and pinch
+        let touchStartX = 0
+        let pinchStartDist = 0
+        const getDist = (t) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY)
+        modal.addEventListener('touchstart', (e)=>{
+          if (e.touches.length === 1) { touchStartX = e.touches[0].clientX; if (scale>1) startDrag(e.touches[0].clientX, e.touches[0].clientY) }
+          if (e.touches.length === 2) { pinchStartDist = getDist(e.touches) }
+        }, { passive: true })
+        modal.addEventListener('touchmove', (e)=>{
+          if (e.touches.length === 2 && pinchStartDist) {
+            const d = getDist(e.touches)
+            const factor = d / pinchStartDist
+            scale = Math.max(1, Math.min(4, factor))
+            if (scale===1) { tx=0; ty=0 }
+            applyTransform()
+          } else if (e.touches.length === 1 && isDragging) {
+            moveDrag(e.touches[0].clientX, e.touches[0].clientY)
+          }
+        }, { passive: true })
+        modal.addEventListener('touchend', (e)=>{
+          if (e.changedTouches.length === 1 && currentIndex >= 0 && !pinchStartDist) {
+            const dx = e.changedTouches[0].clientX - touchStartX
+            if (Math.abs(dx) > 50) show(dx < 0 ? 1 : -1)
+          }
+          if (e.touches.length < 2) pinchStartDist = 0
+          if (e.touches.length === 0) endDrag()
+        })
+      })()
+      
+      // Share and Install buttons functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const shareBtn = document.querySelector('.share-btn');
+        const installBtn = document.querySelector('.install-btn');
+        const installModal = document.getElementById('install-modal');
+        const modalClose = document.querySelector('.modal-close');
+        
+        // Share functionality
+        if (shareBtn) {
+          shareBtn.addEventListener('click', async () => {
+            const shareData = {
+              title: 'BarBerSHOP誠屋【バーバーショップマコトヤ】',
+              text: '💈鹿児島県霧島市のマンツーマン施術メンズ専門店 誠屋💈 高い技術で地元愛されるバーバー 8:30～19:30営業',
+              url: window.location.href
+            };
+            
+            try {
+              if (navigator.share) {
+                await navigator.share(shareData);
+              } else {
+                // Fallback: copy to clipboard
+                await navigator.clipboard.writeText(window.location.href);
+                alert('URLをコピーしました！');
+              }
+            } catch (err) {
+              console.log('Share cancelled or failed:', err);
+              // User cancelled sharing, do nothing
+            }
+          });
+        }
+        
+        // Save options modal
+        if (installBtn) {
+          installBtn.addEventListener('click', () => {
+            const saveModal = document.getElementById('save-options-modal');
+            if (saveModal) {
+              saveModal.style.display = 'flex';
+              document.body.style.overflow = 'hidden';
+            }
+          });
+        }
+        
+        // Save modal functionality
+        const saveModal = document.getElementById('save-options-modal');
+        const closeModalBtn = document.getElementById('close-modal-button');
+        const addToHomeScreenBtn = document.getElementById('add-to-home-screen-button');
+        
+        // Close save modal
+        if (closeModalBtn) {
+          closeModalBtn.addEventListener('click', () => {
+            if (saveModal) {
+              saveModal.style.display = 'none';
+              document.body.style.overflow = '';
+            }
+          });
+        }
+        
+        // Close save modal when clicking outside
+        if (saveModal) {
+          saveModal.addEventListener('click', (e) => {
+            if (e.target === saveModal) {
+              saveModal.style.display = 'none';
+              document.body.style.overflow = '';
+            }
+          });
+        }
+        
+        // Home screen add instructions
+        if (addToHomeScreenBtn) {
+          addToHomeScreenBtn.addEventListener('click', () => {
+            const instructions = `ホーム画面に追加する手順
+
+【iPhone/iPadの場合】
+1. Safariでウェブサイトを開く
+2. 画面下部（または上部）の「共有」アイコンをタップ
+3. 「ホーム画面に追加」を選択
+4. 「追加」をタップ
+
+【Androidの場合 (Chrome)】
+1. Chromeでウェブサイトを開く
+2. 右上の「⋮」メニューをタップ
+3. 「ホーム画面に追加」を選択
+4. 画面の指示に従い「追加」をタップ`;
+            
+            alert(instructions);
+            if (saveModal) {
+              saveModal.style.display = 'none';
+              document.body.style.overflow = '';
+            }
+          });
+        }
+        
+        // Close modal
+        if (modalClose) {
+          modalClose.addEventListener('click', () => {
+            installModal.style.display = 'none';
+            document.body.style.overflow = '';
+          });
+        }
+        
+        // Close modal when clicking outside
+        if (installModal) {
+          installModal.addEventListener('click', (e) => {
+            if (e.target === installModal) {
+              installModal.style.display = 'none';
+              document.body.style.overflow = '';
+            }
+          });
+        }
+      });
+    </script>
+  <!-- Lightbox overlay container is injected by script -->
+  </body>
+</html>

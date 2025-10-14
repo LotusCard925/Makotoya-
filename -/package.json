@@ -1,0 +1,17 @@
+{
+  "name": "makotoya-website",
+  "version": "1.0.0",
+  "description": "BarBerSHOP誠屋のウェブサイト",
+  "main": "generate-site.js",
+  "scripts": {
+    "build": "node generate-site.js",
+    "start": "node generate-site.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["website", "barbershop", "makotoya"],
+  "author": "LotusCard925",
+  "license": "MIT"
+}
+
