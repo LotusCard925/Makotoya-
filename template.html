@@ -73,7 +73,7 @@
       <div class="modal-content">
         <p class="modal-title">保存方法を選択</p>
         <div class="modal-actions">
-          <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:誠屋%0AORG:BarBerSHOP誠屋%0ATITLE:バーバーショップ%0AURL:{{ shop_address_url }}%0ANOTE:鹿児島県霧島市のマンツーマン施術メンズ専門店%0AEND:VCARD" download="誠屋.vcf" class="modal-button">連絡先に保存</a>
+          <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:{{ shop_name }}%0AORG:BarBerSHOP{{ shop_name }}%0ATITLE:バーバーショップ%0AURL:https://makotoya.vercel.app/%0APHOTO;VALUE=uri:https://makotoya.vercel.app/{{ profile_image_url }}%0ANOTE:鹿児島県霧島市のマンツーマン施術メンズ専門店%0AEND:VCARD" download="{{ shop_name }}.vcf" class="modal-button">連絡先に保存</a>
           
           <a href="mailto:?subject=【BarBerSHOP誠屋】誠屋様の連絡先&body=誠屋様の連絡先です。%0A%0A---%0A店舗名: BarBerSHOP誠屋%0A住所: 〒899-4332 鹿児島県霧島市国分中央６丁目13-1%0A営業時間: 8:30～19:30%0A定休日: 毎週火曜日・祝日%0AInstagram: https://www.instagram.com/barbershop_makotoya/%0A予約: https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000578633&ch=5&vos=cphpbprocap0130408001%0A---" class="modal-button">メールを自分に送信</a>
           
